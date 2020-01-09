@@ -1,0 +1,40 @@
+name:                coinflip
+version:             0.1.0.0
+github:              "githubuser/coinflip"
+license:             BSD3
+author:              "Tommy Clark"
+maintainer:          "tommy.clark@outlook.com"
+
+extra-source-files:
+- README.md
+
+description:         Please see the README on GitHub at <https://github.com/tommyclark/coinflip#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- random
+
+library:
+  source-dirs: src
+
+executables:
+  coinflip-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - coinflip
+
+tests:
+  coinflip-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - coinflip

@@ -1,0 +1,3 @@
+import Coin
+
+main = flipCoin
